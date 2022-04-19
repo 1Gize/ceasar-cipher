@@ -3,16 +3,10 @@ import org.scalatest.matchers.should
 import CeasarCipher._
 
 class ceasarSpec extends AnyFlatSpec with should.Matchers{
-//  def ceaser(word: String, offset: Int) ={
-//    word match {
-//      case "a" => "b"
-//      case "abcz" => "bcda"
-//      case "irk" => "vex"
-//      case "fusion" => "layout"
-//      case "dailyprogrammer" => "jgorevxumxgsskx"
-//      case "jgorevxumxgsskx" => "dailyprogrammer"
-//    }
-//  }
+
+  "caesar" should "return string abcz for input string abcz and offset" in {
+    ceaser("abcz", 26*5) shouldBe "abcz"
+  }
   it should "return b for input(a, 1)" in{
     ceaser("a", 1) shouldBe "b"
   }

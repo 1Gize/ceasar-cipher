@@ -2,17 +2,14 @@ import scala.collection.mutable.ListBuffer
 
 object CeasarCipher {
   def ceaser(word: String, offset: Int) = {
-    word.map(c => moveChar(c, offset))
-
-  }
-
-  def moveChar(c: Char, x: Int) = {
-    val newChar = (c.toInt + x).toChar
-    if (newChar.toInt > 122) {
-      val finalChar = (newChar.toInt - 26).toChar
-      finalChar
-    } else {
-      newChar
+    def moveChar(c: Char, x: Int) = {
+      val newChar = (c.toInt + x)
+      if (newChar > 122) {
+        (newChar - 26).toChar
+      } else {
+        newChar.toChar
+      }
     }
+    word.map(c => moveChar(c, offset%26))
   }
 }
