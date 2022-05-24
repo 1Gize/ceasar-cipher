@@ -1,0 +1,20 @@
+Ceasar cipher
+==========
+What is it?
+-----------
+Program works as an automatic ceasar cipher witch:
+Given a string of lowercase letters and a number, returns a string with each letter shifted by the given amount.
+-----------
+Example of usage:
+-----------
+caesar("a", 1) = "b"
+
+caesar("abcz", 1) = "bcda"
+
+caesar("irk", 13) =&gt; "vex"
+
+caesar("fusion", 6) =&gt; "layout"
+
+caesar("dailyprogrammer", 6) =&gt; "jgorevxumxgsskx"
+
+caesar("jgorevxumxgsskx", 20) =&gt; "dailyprogrammer"
