@@ -1,11 +1,31 @@
-Ceasar cipher
-==========
-What is it?
------------
+= Ceasar cipher
+
+:toc:
+
+
+== What is it?
+
 Program works as an automatic ceasar cipher witch:
 Given a string of lowercase letters and a number,
 returns a string with each letter shifted by the given amount.
-Example of usage:
+
+== Dependencies
+
+To run this program u will only need basic test tool for scala,
+which are: scalatic and scalatest
+
+.Library dependecies
+[source,sbt]
+libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.11"
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.11" % "test"
+
+== How to run?
+
+To run this program clone this project and do `sbt package` in terminal.
+After obtaining jar file run it with first argument beeing word which you want to cypher,
+and second being offset as integer.
+
+.Example of usage
 
 caesar("a", 1) = "b"
 
@@ -18,25 +38,9 @@ caesar("fusion", 6) = "layout"
 caesar("dailyprogrammer", 6) = "jgorevxumxgsskx"
 
 caesar("jgorevxumxgsskx", 20) =  "dailyprogrammer"
------------
-Dependencies
------------
-To run this program u will only need basic test tool for scala,
-which are: scalatic and scalatest
------------
-.Library dependecies
-[source,sbt]
-libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.11"
-libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.11" % "test"
 
-How to run?
------------
-To run this program clone this project and do `sbt package` in terminal.
-After obtaining jar file run it with first argument beeing word which you want to cypher,
-and second being offset as integer.
------------
-Troubleshooting
------------
+
+== Troubleshooting
 Most common problems while running this application are arguments in diffrent order.
 Make sure you put the word first and offset after.
------------
+
